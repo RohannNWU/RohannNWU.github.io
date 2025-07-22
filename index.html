@@ -3,18 +3,26 @@
     <head>
         <meta charset="UTF-8">
         <link rel="stylesheet" href="style.css">
-        <script src="script.js"></script>
         <title>Rohann Venter CV</title>
     </head>
     <body>
         <h1>Curriculum Vitae of Rohann Venter</h1>
-        <select id="myDropdown" onchange="handleSelection()">
-            <option value="">-- Please choose an option --</option>
-            <option value="option1">Option 1</option>
-            <option value="option2">Option 2</option>
-            <option value="option3">Option 3</option>
-        </select>
+        <div class="navbar">
+            <span style="color: white; font-size: 20px">My Menu</span>
 
-        <p id="result"></p>
+            <select id="menuDropdown">
+                <option value="">-- Select an option --</option>
+                <option value="home">Home</option>
+                <option value="about">About</option>
+                <option value="services">Services</option>
+                <option value="contact">Contact</option>
+            </select>
+        </div>
+
+        <div class="content">
+            <p id="result">Please select an option from the menu.</p>
+        </div>
+        
+        <script src="script.js"></script>
     </body>
 </html>
