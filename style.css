@@ -1,79 +1,146 @@
+:root {
+    --glow-color-1: #00ffff;
+    --glow-color-2: #66ffff;
+    --glow-color-3: #00d5d5;
+}
+
 body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
     background: #f4f4f4;
 }
 
-.navbar {
-    background: #3f51b5;
+.glow-navbar {
+    background: #0a1a50; /* Dark blue background */
+    padding: 20px 0;
+    text-align: center;
+}
+
+.glow-name {
+    font-size: 40px;
     color: #fff;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 12px 30px;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-}
-
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 25px;
+    text-shadow:    
+        0 0 10px var(--glow-color-1),
+        0 0 20px var(--glow-color-2),
+        0 0 30px var(--glow-color-3);
     margin: 0;
-    padding: 0;
+    animation: pulse 2s infinite;
 }
 
-.nav-links a {
+@keyframes pulse {
+    0%, 100% {
+        text-shadow: 
+            0 0 10px var(--glow-color-1), 
+            0 0 20px var(--glow-color-2), 
+            0 0 30px var(--glow-color-3);
+    }
+    50% {
+        text-shadow: 
+            0 0 5px var(--glow-color-1) 
+            0 0 10px var(--glow-color-2), 
+            0 0 15px var(--glow-color-3);
+    }
+}
+
+/* Menu */
+.glow-menu {
+    list-style: none;
+    padding: 20px 0 10px 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+.glow-menu li {
+    display: inline;
+}
+
+.glow-menu a {
     color: #fff;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 18px;
+    position: relative;
     transition: color 0.3s;
 }
 
-.nav-links a:hover {
-    color: #ddd;
+.glow-menu a:hover {
+    color: #00ffff;
+    cursor: default;
 }
 
-/* Icons */
-.icons {
-    font-size: 18px;
-    display: flex;
-    gap: 15px;
-    cursor: pointer;
+/* Optional underline effect on hover */
+.glow-menu a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #00ffff;
+    transition: width 0.3s;
+    margin: auto;
 }
 
-/* Main Content */
-.main-content {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+.glow-menu a:hover::after {
+    width: 100%;
+}
+
+.content {
+    padding: 30px;
+    max-width: 800px;
+    margin: 50px auto;
     text-align: center;
-    padding-top: 60px; /* To account for fixed navbar */
+    background: #eee;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
-.main-content h1 {
-    font-size: 48px;
-    margin: 0;
+nav a.active {
+    font-weight: bold;
+    border-bottom: 2px solid #333;
 }
 
 /* Dark Mode */
 body.dark-mode {
     background: #121212;
+    color: #fff;
+    --glow-color-1: #ff4b5c;
+    --glow-color-2: #ff707f;
+    --glow-color-3: #ff1a2a;
+}
+
+body.dark-mode .glow-navbar {
+    background: #333;
+}
+
+body.dark-mode .glow-menu a {
     color: #eee;
 }
 
-body.dark-mode .navbar {
+body.dark-mode .glow-menu a:hover {
+    color: #ff4b5c;
+}
+
+body.dark-mode .glow-menu a::after {
+    background: #ff4b5c;
+}
+
+.footer {
+    background: #0a1a50;
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 14px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+}
+
+body.dark-mode .footer {
+    background: #333;
+}
+
+body.dark-mode .content {
     background: #222;
-}
-
-body.dark-mode .nav-links a {
     color: #eee;
-}
-
-body.dark-mode .nav-links a:hover {
-    color: #bbb;
 }
