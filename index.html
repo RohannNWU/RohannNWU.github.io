@@ -1,11 +1,20 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta charset="UTF-8">
         <link rel="stylesheet" href="style.css">
+        <script src="script.js"></script>
         <title>Rohann Venter CV</title>
     </head>
     <body>
         <h1>Curriculum Vitae of Rohann Venter</h1>
-        <p>I'm hosted with Github Pages.</p>
+        <select id="myDropdown" onchange="handleSelection()">
+            <option value="">-- Please choose an option --</option>
+            <option value="option1">Option 1</option>
+            <option value="option2">Option 2</option>
+            <option value="option3">Option 3</option>
+        </select>
+
+        <p id="result"></p>
     </body>
 </html>
