@@ -1,9 +1,6 @@
 h1 {
-<<<<<<< HEAD
-    font-family: 'Comic Sans MS';
-=======
+   font-family: 'Comic Sans MS';
     font-family: comic sans;
->>>>>>> 992494297384c4808b227b610403dc030c832261
     font-size: 200%;
     color: aqua;
 }
