@@ -11,6 +11,10 @@ body {
     align-items: center;
     justify-content: space-between;
     padding: 12px 30px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
 }
 
 .logo {
@@ -24,10 +28,6 @@ body {
     gap: 25px;
     margin: 0;
     padding: 0;
-}
-
-.nav-links li {
-    position: relative;
 }
 
 .nav-links a {
@@ -75,6 +75,21 @@ body {
     display: flex;
     gap: 15px;
     cursor: pointer;
+}
+
+.main-content {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding-top: 60px;
+}
+
+.main-content h1 {
+    font-size: 48px;
+    margin: 0;
 }
 
 body.dark-mode {
