@@ -1,14 +1,12 @@
-document.addEventListener("DOMContentLoaded", function() {
-    const dropdown = document.getElementById("menuDropdown");
-    const result = document.getElementById("result");
+document.addEventListener("DOMContentLoaded", () => {
+    const moonIcon = document.querySelector(".moon");
+    const closeIcon = document.querySelector(".close");
 
-    dropdown.addEventListener("change", function() {
-        const selected = dropdown.value;
+    moonIcon.addEventListener("click", () => {
+        alert("Dark mode toggled (this is just a placeholder)");
+    });
 
-        if (selected) {
-            result.textContent = "You selected: " + selected.charAt(0).toUpperCase() + selected.slice(1);
-        } else {
-            result.textContent = "Please select an option from the menu."
-        }
+    closeIcon.addEventListener("click", () => {
+        alert("Menu closed (this is just a placeholder)");
     });
 });

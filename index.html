@@ -1,28 +1,36 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <meta charset="UTF-8">
         <link rel="stylesheet" href="style.css">
         <title>Rohann Venter CV</title>
     </head>
     <body>
-        <h1>Curriculum Vitae of Rohann Venter</h1>
-        <div class="navbar">
-            <span style="color: white; font-size: 20px">My Menu</span>
+        <nav class="navbar">
+            <div class="logo">Rohann Venter</div>
 
-            <select id="menuDropdown">
-                <option value="">-- Select an option --</option>
-                <option value="home">Home</option>
-                <option value="about">About</option>
-                <option value="services">Services</option>
-                <option value="contact">Contact</option>
-            </select>
-        </div>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Portfolio</a></li>
 
-        <div class="content">
-            <p id="result">Please select an option from the menu.</p>
-        </div>
-        
+                <li class="dropdown">
+                    <a href="#">Services</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Web Development</a></li>
+                        <li><a href="#">App Development</a></li>
+                        <li><a href="#">Consulting</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="#">Contact</a></li>
+            </ul>
+
+            <div class="icons">
+                <span class="moon">🌙</span>
+                <span class="close">✖</span>
+            </div>
+        </nav>
         <script src="script.js"></script>
     </body>
 </html>
