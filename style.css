@@ -1,5 +1,9 @@
 h1 {
-  color: blue;
+  color: aquamarine;
   font-family: verdana;
   font-size: 300%;
+}
+
+body {
+    color: dimgray;
 }
