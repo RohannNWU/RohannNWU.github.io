@@ -76,3 +76,32 @@ body {
     gap: 15px;
     cursor: pointer;
 }
+
+body.dark-mode {
+    background: #121212;
+    color: #eee;
+}
+
+body.dark-mode .navbar {
+    background: #222;
+}
+
+body.dark-mode .nav-links a {
+    color: #eee;
+}
+
+body.dark-mode .nav-links a:hover {
+    color: #bbb;
+}
+
+body.dark-mode .dropdown-menu {
+    background: #333;
+}
+
+body.dark-mode .dropdown-menu li a {
+    color: #eee;
+}
+
+body.dark-mode .dropdown-menu li a:hover {
+    color: #bbb;
+}

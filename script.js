@@ -3,7 +3,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const closeIcon = document.querySelector(".close");
 
     moonIcon.addEventListener("click", () => {
-        alert("Dark mode toggled (this is just a placeholder)");
+        document.body.classList.toggle("dark-mode");
+        moonIcon.textContent = document.body.classList.contains("dark-mode") ? "☀️" : "🌙";
     });
 
     closeIcon.addEventListener("click", () => {
