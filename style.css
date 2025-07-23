@@ -1,30 +1,41 @@
 :root {
-    --glow-color-1: #00ffff;
-    --glow-color-2: #66ffff;
-    --glow-color-3: #00d5d5;
+    --glow-color-1: #39ff14;
+    --glow-color-2: #66ff66;
+    --glow-color-3: #00cc00;
 }
 
 body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
-    background: #f4f4f4;
+    background: #aae0a1;
+    padding-top: 70px;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 0 0;
+    margin: 0;
 }
 
 .glow-navbar {
-    background: #0a1a50; /* Dark blue background */
+    background: #083008; 
     padding: 20px 0;
     text-align: center;
 }
 
 .glow-name {
     font-size: 40px;
-    color: #fff;
+    color: #66ff66;
     text-shadow:    
         0 0 10px var(--glow-color-1),
         0 0 20px var(--glow-color-2),
         0 0 30px var(--glow-color-3);
     margin: 0;
-    animation: pulse 2s infinite;
+    animation: pulse 5s infinite;
 }
 
 @keyframes pulse {
@@ -65,17 +76,16 @@ body {
 }
 
 .glow-menu a:hover {
-    color: #00ffff;
+    color: #39ff14;
     cursor: default;
 }
 
-/* Optional underline effect on hover */
 .glow-menu a::after {
     content: '';
     display: block;
     width: 0;
     height: 2px;
-    background: #00ffff;
+    background: #39ff14;
     transition: width 0.3s;
     margin: auto;
 }
@@ -85,27 +95,73 @@ body {
 }
 
 .content {
-    padding: 30px;
+    flex: 1;
+    font-family: 'Century Gothic';
+    padding: 10px;
     max-width: 800px;
-    margin: 50px auto;
+    margin: 10px auto;
+    margin-top: 70px;
     text-align: center;
-    background: #eee;
+    background: #87e187;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    padding-bottom: 10px;
+}
+
+.footer {
+    background: #083008;
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 14px;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    height: 10px;
 }
 
 nav a.active {
     font-weight: bold;
-    border-bottom: 2px solid #333;
+    color: #39ff14;
 }
 
-/* Dark Mode */
+h2 {
+  font-family: 'Copperplate Gothic Light';
+  font-size: 2.2rem;
+  color: #222;
+  border-bottom: 3px solid #083008;
+  display: inline-block;
+  padding-bottom: 0.3rem;
+  margin-bottom: 10px;
+  margin-top: 0.2px;
+}
+
+img {
+    max-width: 150px;
+    border-radius: 0;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+a:focus {
+    outline: none;
+}
+
 body.dark-mode {
     background: #121212;
-    color: #fff;
+    color: #ff707f;
     --glow-color-1: #ff4b5c;
     --glow-color-2: #ff707f;
     --glow-color-3: #ff1a2a;
+}
+
+body.dark-mode .glow-name {
+    color: #ff707f;
 }
 
 body.dark-mode .glow-navbar {
@@ -133,15 +189,15 @@ body.dark-mode .content {
     color: #eee;
 }
 
-.footer {
-    background: #0a1a50;
-    color: #fff;
-    text-align: center;
-    padding: 15px 0;
-    font-size: 14px;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-    left: 0;
+body.dark-mode nav a.active {
+    font-weight: bold;
+    color: #ff4b5c;
 }
 
+body.dark-mode h2 {
+  color: #eee;
+  font-family: 'Copperplate Gothic Light';
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+  border-bottom: 3px solid #ff707f;
+}
