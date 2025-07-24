@@ -100,7 +100,7 @@ body {
     padding: 10px;
     max-width: 800px;
     margin: 10px auto;
-    margin-top: 70px;
+    margin-top: 85px;
     text-align: center;
     background: #87e187;
     border-radius: 12px;
@@ -139,7 +139,6 @@ h2 {
 img {
     max-width: 150px;
     border-radius: 0;
-    box-shadow: 0 0 10px rgba(0,0,0,0.3);
 }
 
 a {
@@ -150,6 +149,139 @@ a {
 
 a:focus {
     outline: none;
+}
+
+.job-entry h3 {
+    font-weight: bold;
+    font-size: 1.25em;
+    margin-bottom: 0.2em;
+    text-decoration: underline;
+}
+
+.job-entry h4 {
+    font-weight: normal;
+    font-size: 1em;
+    margin: 0;
+}
+
+ul.aircraft {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  display: table;
+}
+
+ul.aircraft li {
+  position: relative;
+  padding-left: 28px;
+  margin-bottom: 6px;
+  line-height: 1.5;
+  text-align: left;
+}
+
+ul.aircraft li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 16px;
+  background: url('images/plane.png') no-repeat center center;
+  background-size: contain;
+}
+
+ul.computer {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  display: table;
+}
+
+ul.computer li {
+  position: relative;
+  padding-left: 28px;
+  margin-bottom: 6px;
+  line-height: 1.5;
+  text-align: left;
+}
+
+ul.computer li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 16px;
+  background: url('images/pc.png') no-repeat center center;
+  background-size: contain;
+}
+
+ul.general {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  display: table;
+}
+
+ul.general li {
+  position: relative;
+  padding-left: 28px;
+  margin-bottom: 6px;
+  line-height: 1.5;
+  text-align: left;
+}
+
+ul.general li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 16px;
+  background: url('images/idea.jpg') no-repeat center center;
+  background-size: contain;
+}
+
+ul.coding {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  display: table;
+}
+
+ul.coding li {
+  position: relative;
+  padding-left: 28px;
+  margin-bottom: 6px;
+  line-height: 1.5;
+  text-align: left;
+}
+
+ul.coding li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 16px;
+  background: url('images/binary.png') no-repeat center center;
+  background-size: contain;
+}
+
+.marks-table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.marks-table td {
+    padding: 6px 12px;
+    border: none;
+    font-size: 1em;
 }
 
 body.dark-mode {
@@ -200,4 +332,12 @@ body.dark-mode h2 {
   font-size: 2.2rem;
   margin-bottom: 1rem;
   border-bottom: 3px solid #ff707f;
+}
+
+body.dark-mode img {
+    background: lightgray;
+}
+
+body.dark-mode ul li::before {
+  background-color: lightgray;
 }
