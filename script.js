@@ -91,6 +91,11 @@ function loadEducation() {
             <h3>North-West University</h3>
             <h4>Bachelor of Science in Information Technology</h4>
             <h4>Graduation estimated 2025</h4>
+            </br>
+            <a href="files/AcademicReport.pdf" target="_blank">
+                <img src="images/pdf.png" style="max-width: 15px;">
+                View my University Academic Record
+            </a>
 
             <h3>Cranfield Aviation Training</h3>
             <h4>Train-the-Trainer Course</h4>
