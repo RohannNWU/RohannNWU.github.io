@@ -1,5 +1,5 @@
 :root {
-    --glow-color-1: #39ff14;
+    --glow-color-1: #90EE90;
     --glow-color-2: #66ff66;
     --glow-color-3: #00cc00;
 }
@@ -7,7 +7,7 @@
 body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
-    background: #aae0a1;
+    background: #D3D3D3;
     padding-top: 70px;
 }
 
@@ -22,20 +22,20 @@ body {
 }
 
 .glow-navbar {
-    background: #083008; 
+    background: #244734; 
     padding: 20px 0;
     text-align: center;
 }
 
 .glow-name {
     font-size: 40px;
-    color: #66ff66;
+    color: #c6feca;
     text-shadow:    
         0 0 10px var(--glow-color-1),
         0 0 20px var(--glow-color-2),
         0 0 30px var(--glow-color-3);
     margin: 0;
-    animation: pulse 5s infinite;
+    animation: pulse 4s infinite;
 }
 
 @keyframes pulse {
@@ -75,7 +75,7 @@ body {
 }
 
 .glow-menu a:hover {
-    color: #39ff14;
+    color: #97ff9e;
     cursor: default;
 }
 
@@ -84,7 +84,7 @@ body {
     display: block;
     width: 0;
     height: 2px;
-    background: #39ff14;
+    background: #97ff9e;
     transition: width 0.3s;
     margin: auto;
 }
@@ -101,14 +101,14 @@ body {
     margin: 10px auto;
     margin-top: 85px;
     text-align: center;
-    background: #87e187;
+    background: #FFFFE0;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     padding-bottom: 10px;
 }
 
 .footer {
-    background: #083008;
+    background: #244734;
     color: #fff;
     text-align: center;
     padding: 15px 0;
@@ -120,7 +120,7 @@ body {
 }
 
 nav a.active {
-    color: #39ff14;
+    color: #97ff9e;
 }
 
 h2 {
@@ -283,11 +283,11 @@ ul.coding li::before {
 }
 
 body.dark-mode {
-    background: #121212;
+    background: #000000;
     color: #ff707f;
-    --glow-color-1: #ff4b5c;
-    --glow-color-2: #ff707f;
-    --glow-color-3: #ff1a2a;
+    --glow-color-1: #ff707f;
+    --glow-color-2: #ff1a2a;
+    --glow-color-3: #FF0000;
 }
 
 body.dark-mode .glow-name {
@@ -295,32 +295,32 @@ body.dark-mode .glow-name {
 }
 
 body.dark-mode .glow-navbar {
-    background: #333;
+    background: #2d2b3c;
 }
 
 body.dark-mode .glow-menu a {
-    color: #eee;
+    color: #dfdfdf;
 }
 
 body.dark-mode .glow-menu a:hover {
-    color: #ff4b5c;
+    color: #ff707f;
 }
 
 body.dark-mode .glow-menu a::after {
-    background: #ff4b5c;
+    background: #ff707f;
 }
 
 body.dark-mode .footer {
-    background: #333;
+    background: #2d2b3c;
 }
 
 body.dark-mode .content {
-    background: #222;
-    color: #eee;
+    background: #242424;
+    color: #dfdfdf;
 }
 
 body.dark-mode nav a.active {
-    color: #ff4b5c;
+    color: #ff707f;
 }
 
 body.dark-mode h2 {
@@ -332,9 +332,9 @@ body.dark-mode h2 {
 }
 
 body.dark-mode img {
-    background: lightgray;
+    background: #dfdfdf;
 }
 
 body.dark-mode ul li::before {
-  background-color: lightgray;
+  background-color: #dfdfdf;
 }

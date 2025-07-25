@@ -140,10 +140,6 @@ function loadEducation() {
                     <td>Physical Sciences</td>
                     <td>58%</td>
                 </tr>
-                <tr>
-                    <td>Mathematics Paper 3</td>
-                    <td>47%</td>
-                </tr>
             </table>
         </div>
     `;
@@ -153,7 +149,25 @@ function loadEducation() {
 function loadProject() {
     dynamicContent.innerHTML = `
         <h2>My Projects</h2>
-        <p></p>
+        <div class="job-entry">
+            <p>
+                <h3>CMPG213 and CMPG 223 Group Project</h3>
+                <h4>DVD Rental System</h4>
+                    GitHub Repo: 
+                    <a href="https://github.com/JacquesNWU/CMPG223_Group10_DVD_Rental" target="_blank" style="text-decoration: underline">
+                    visit site
+                    </a>
+            </p>
+
+            <p>
+                <h3>Medical Appointment System</h3>
+                <h4>Windows Form and Web Application</h4>
+                    Demo Video: 
+                    <a href="files/Medical_Appointment_Demo_Video.zip" target="_blank" style="text-decoration: underline" download>
+                    download
+                    </a>
+            </p>
+        </div>
     `;
     setActiveLink(document.getElementById("project-link"));
 }
