@@ -11,7 +11,7 @@ layout.
 - Dark/Light mode toggle
 
 ## Live Demo
-View the website here - https://rohannnwu.github.io
+View the website here - https://rohannnwu.github.io/cv-website
 
 ## Folder Structure
 /cv-website
