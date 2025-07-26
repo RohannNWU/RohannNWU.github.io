@@ -367,3 +367,10 @@ body.dark-mode img {
 body.dark-mode ul li::before {
   background-color: #dfdfdf;
 }
+
+body.dark-mode .container {
+    text-align: center;
+    font-family: 'Century Gothic';
+    background-color: #242424;
+    padding: 20px;
+}
