@@ -119,6 +119,35 @@ body {
     height: 10px;
 }
 
+.dropdown-content {
+    display: none;
+    margin-top: 10px;
+}
+
+.dropdown-header {
+    font-weight: bold;
+    font-size: 20px;
+    cursor: default;
+    margin-top: 20px;
+    position: relative;
+}
+
+.fa-chevron-down {
+    margin-left: 8px;
+    transition: transform 0.3s ease;
+}
+
+.rotate {
+    transform: rotate(180deg);
+}
+
+.container {
+    text-align: center;
+    font-family: 'Century Gothic';
+    background-color: #ffffe8;
+    padding: 20px;
+}
+
 nav a.active {
     color: #97ff9e;
 }

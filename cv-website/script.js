@@ -72,12 +72,35 @@ function loadSkills() {
             </p>
             <p>
                 <h3>Programming Skills</h3>
-                <ul class="coding">
-                    <li>C# with ASP.NET</li>
-                    <li>SQL in Oracle</li>
-                    <li>Python</li>
-                    <li>Java</li>
-                </ul>
+                <div style="justify-items: center;">
+                    <table style="table-layout: fixed;">
+                        <tr>
+                            <td style="width: 250px; height: 100px;">
+                                <img src="images/asp.png" style="max-width: 100px;">
+                            </td>
+                            <td style="width: 250px; height: 100px;">
+                                <img src="images/csharp.png" style="max-width: 100px;">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 250px; height: 100px;">
+                                <img src="images/mssql.png" style="max-width: 100px;">
+                            </td>
+                            <td style="width: 250px; height: 100px;">
+                                <img src="images/python.png" style="max-width: 100px;">
+                            </td>
+                        <tr>
+                        <tr>
+                            <td style="width: 250px; height: 100px;">
+                                <img src="images/java.png" style="max-width: 100px;">
+                            </td>
+                            <td style="width: 250px; height: 100px;">
+                                <img src="images/oracle.png" style="max-width: 100px;">
+                                </br>Oracle SQL Developer
+                            </td>
+                        </tr>
+                    </table>
+                </div>
             </p>
         </div>
     `;
@@ -149,24 +172,55 @@ function loadEducation() {
 function loadProject() {
     dynamicContent.innerHTML = `
         <h2>My Projects</h2>
-        <div class="job-entry">
-            <p>
-                <h3>CMPG213 and CMPG 223 Group Project</h3>
-                <h4>DVD Rental System</h4>
-                    GitHub Repo: 
-                    <a href="https://github.com/JacquesNWU/CMPG223_Group10_DVD_Rental" target="_blank" style="text-decoration: underline">
-                    visit site
-                    </a>
-            </p>
+        <div class="container">
+            <div class="dropdown-header" onclick="toggleDropdown('project1', 'icon1')">
+                CMPG213 and CMPG 223 Group Project
+                <i id="icon1" class="fas fa-chevron-down"></i>
+            </div>
+            <div id="project1" class="dropdown-content">
+                <p>DVD Rental System</p>
+                <p>GitHub Repo: <a href="https://github.com/JacquesNWU/CMPG223_Group10_DVD_Rental" target="_blank">visit site</a></p>
+            </div>
 
-            <p>
-                <h3>Medical Appointment System</h3>
-                <h4>Windows Form and Web Application</h4>
-                    Demo Video: 
+            <div class="dropdown-header" onclick="toggleDropdown('project2', 'icon2')">
+                Medical Appointment System
+                <i id="icon2" class="fas fa-chevron-down"></i>    
+            </div>
+            <div id="project2" class="dropdown-content">
+                <p>C# Windows Form and ASP.net Web Application</p>
+                <p>Demo Video: 
                     <a href="files/Medical_Appointment_Demo_Video.zip" target="_blank" style="text-decoration: underline" download>
                     download
                     </a>
-            </p>
+                </p>    
+                <div style="justify-items: center;">
+                    <table>
+                        <tr>
+                            <td>
+                                <img src="images/BrightonMedical/Dashboard.png" style="max-width: 400px;">
+                            </td>
+                            <td>
+                                <img src="images/BrightonMedical/EditAppointment.png" style="max-width: 400px;">
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <div class="dropdown-header" onclick="toggleDropdown('project3', 'icon3')">
+                Flight Crew Logbook
+                <i id="icon3" class="fas fa-chevron-down"></i>
+            </div>
+            
+            <div id="project3" class="dropdown-content">
+                <p>
+                    Designed with C# and ASP.net</br>
+                    Developed in Visual Studio 2022
+                </p>
+                <p>
+                    <img src="images/FlightCrewLogbook/dashboard.png" style="max-width: 600px;">
+                </p>
+            </div>
         </div>
     `;
     setActiveLink(document.getElementById("project-link"));
@@ -175,32 +229,32 @@ function loadProject() {
 function loadContact() {
     dynamicContent.innerHTML = `
         <h2>Contact Me</h2>
-        <div style="justify-items: left;">
+        <div>
             <p>
                 <a href="https://www.linkedin.com/in/rohann-venter-67b39a136/" target="_blank">
-                    <img src="images/linkedin.png" style="max-width: 20px;">
-                    LinkedIn Profile - Rohann Venter
+                    <img src="images/linkedin.png" style="max-width: 40px;">
+                    </br>LinkedIn Profile - Rohann Venter
                     </a>
             </p>
 
             <p>
                 <a href="https://github.com/RohannNWU" target="_blank">
-                    <img src="images/github.png" style="max-width: 20px;">
-                    GitHub Page - RohannNWU
+                    <img src="images/github.png" style="max-width: 40px;">
+                    </br>GitHub Page - RohannNWU
                 </a>
             </p>
 
             <p>
                 <a href="tel:+27605405568">
-                    <img src="images/telephone.png" style="max-width: 20px; border-radius: 15px;">
-                    +27 60 540 5568
+                    <img src="images/telephone.png" style="max-width: 40px; border-radius: 15px;">
+                    </br>+27 60 540 5568
                 </a>
             </p>
 
             <p>
                 <a href="mailto:rohven21@gmail.com">
-                    <img src="images/email.png" style="max-width: 20px;">
-                    rohven21@gmail.com
+                    <img src="images/email.png" style="max-width: 40px;">
+                    </br>rohven21@gmail.com
                 </a>
             </p>
         </div>
@@ -235,21 +289,30 @@ document.addEventListener("DOMContentLoaded", () => {
         e.preventDefault();
         loadEducation();
     });
-    
+
     document.getElementById("project-link").addEventListener("click", (e) => {
         e.preventDefault();
         loadProject();
     });
-    
+
     document.getElementById("contact-link").addEventListener("click", (e) => {
         e.preventDefault();
         loadContact();
     });
 });
 
-document.getElementById("darkIcon").addEventListener("click", function(e) {
+document.getElementById("darkIcon").addEventListener("click", function (e) {
     e.preventDefault();
     document.body.classList.toggle("dark-mode");
 
     this.textContent = document.body.classList.contains("dark-mode") ? "Jedi" : "Sith";
 });
+
+function toggleDropdown(contentId, iconId) {
+    const content = document.getElementById(contentId);
+    const icon = document.getElementById(iconId);
+    const isVisible = content.style.display === "block";
+
+    content.style.display = isVisible ? "none" : "block";
+    icon.classList.toggle("rotate", !isVisible);
+}
